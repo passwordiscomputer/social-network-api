@@ -1,24 +1,15 @@
-# README
+Name of Student: Chase Bowden
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Name of Project: Social Network API
 
-Things you may want to cover:
+Project’s Purpose or Goal: It will allow a user to use the api as a backbone for a social network they can develop and manage using any front end network they choose.
 
-* Ruby version
+List the absolute minimum features the project requires to meet this purpose or goal: A user model that can have relationships with other users. A messaging system. A post system. A user authentication scheme. Excellent documentation for deploying and utilizing the api. Il
 
-* System dependencies
+What tools, frameworks, libraries, APIs, modules and/or other resources (whatever is specific to your track, and your language) will you use to create this MVP? List them all here. Be specific.
 
-* Configuration
+If you finish developing the minimum viable product (MVP) with time to spare, what will you work on next? Describe these features here: Be specific.
 
-* Database creation
+What additional tools, frameworks, libraries, APIs, or other resources will these additional features require?
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Is there anything else you’d like your instructor to know?
