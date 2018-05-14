@@ -10,6 +10,8 @@ require "action_controller/railtie"
 require "action_mailer/railtie"
 require "action_view/railtie"
 require "action_cable/engine"
+require 'rack'
+require 'rack/cors'
 # require "sprockets/railtie"
 # require "rails/test_unit/railtie"
 
@@ -29,6 +31,7 @@ module SocialNetwork
                  :methods => [:get, :post, :options, :delete, :put, :patch]
       end
     end
+
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration can go into files in config/initializers
