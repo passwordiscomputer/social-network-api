@@ -1,12 +1,10 @@
 class PostsController < ApplicationController
 
-  def create
-    binding.pry
-    @post = current_user.posts.new(post_params)
 
+  def create
+    @post = current_user.posts.new(post_params)
     if @post.save
       #iterate through each of the files
-      binding.pry
       render :show, status: :created, location: @post
     else
       render json: @post.errors, status: :unprocessable_entity
@@ -19,6 +17,6 @@ class PostsController < ApplicationController
   end
 
   def post_params
-    params.permit(:title, :body, :picture) # Add :picture as a permitted parameter
+   params.permit(:title, :body, :picture) # Add :picture as a permitted paramter
   end
 end
