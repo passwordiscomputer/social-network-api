@@ -6,6 +6,7 @@ class PostsController < ApplicationController
 
     if @post.save
       #iterate through each of the files
+      binding.pry
       render :show, status: :created, location: @post
     else
       render json: @post.errors, status: :unprocessable_entity
