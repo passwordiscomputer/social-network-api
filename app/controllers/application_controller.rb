@@ -1,6 +1,8 @@
 class ApplicationController < ActionController::API
  before_action :authenticate_request
   attr_reader :current_user
+  def index
+  end
 
   private
 
@@ -9,6 +11,4 @@ class ApplicationController < ActionController::API
     render json: { error: 'Not Authorized' }, status: 401 unless @current_user
   end
 
-  def index
-  end
 end
