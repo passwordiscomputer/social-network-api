@@ -17,6 +17,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'bcrypt', '~> 3.1.7'
 gem 'carrierwave-base64'
 # Use ActiveStorage variant
+gem 'mime-types', '~> 3.1'
 # gem 'mini_magick', '~> 4.8'
 gem 'jwt'
 # Use Capistrano for deployment
