@@ -1,2 +1,2 @@
 json.author @post.user.name
-json.extract! @post, :title, :body, :picture, :created_at, :updated_at
+json.extract! @post, :id, :title, :body, :picture, :created_at, :updated_at
