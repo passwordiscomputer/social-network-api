@@ -4,6 +4,13 @@ class ProfilesController < ApplicationController
     render :index
   end
 
+  def create
+    @profile = Profile.find_by(user_id: params[:user_id])
+    @user = @profile.user
+    current_user.follow(@user)
+    render :create
+  end
+
   def update
     if current_user == User.find(params[:user_id])
       @profile = Profile.find_by(user_id: params[:user_id])
