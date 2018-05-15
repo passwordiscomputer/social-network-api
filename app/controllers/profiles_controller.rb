@@ -1,6 +1,9 @@
 class ProfilesController < ApplicationController
   def index
-    @profile = Profile.find_by(user_id: params[:user_id])
+    @profile = current_user.profile
+    @following_posts = current_user.following_users.includes(:posts).collect{|u| u.posts}.flatten
+    @following_users = current_user.following_users
+    @follower_users = current_user.followers
     render :index
   end
 
