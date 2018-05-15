@@ -1,8 +1,7 @@
 class PostsController < ApplicationController
 
   def index
-    @posts = current_user.following_users.collect{|u| u.posts}.flatten.sort_by{|post| post.created_at}.reverse
-    render :index
+    @posts = User.find(params[:user_id]).posts
   end
 
   def create
