@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :posts
   resources :users do
     resources :profiles
+    resources :follows
   end
 
 end
