@@ -1,4 +1,8 @@
 class ApplicationController < ActionController::API
+  rescue_from ActiveRecord::RecordNotFound do |exception|
+
+    render json: { error: exception.message }, status: :not_found
+  end
  before_action :authenticate_request
   attr_reader :current_user
   def index

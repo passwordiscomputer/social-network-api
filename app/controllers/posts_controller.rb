@@ -16,6 +16,8 @@ class PostsController < ApplicationController
     render :show, status: :created, location: @post
   end
 
+  private
+
   def post_params
    params.permit(:title, :body, :picture) # Add :picture as a permitted paramter
   end
