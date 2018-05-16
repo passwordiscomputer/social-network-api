@@ -1,4 +1,4 @@
-json.extract! @profile, :id, :bio, :age, :location
+json.profile @profile, :id, :bio, :age, :location
 
 json.posts @posts do |post|
   json.author post.user.name
