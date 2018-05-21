@@ -1,3 +1,97 @@
+# Social-Network-API (Working Title)
+
+This is a social network API built using Ruby on Rails. The goal of this project is to create the basis for a social network that can be easily customized and deployed, then used with any front-end framework. The primary reason for creating this project was to gain more experience building API's using rails. Once this project is complete (or at least partially) I hope to build out a front end using a few different frameworks. Firstly in React to help myself learn that library then in Angular to cement the skills I've already learned. So really this project is mostly designed as a learning tool for myself but anyone is welcome to utilize the api for whatever they like.
+## Getting Started
+
+For the time being this project is under development and will be undergoing changes regularly. As much as possible I will try to keep the master branch stable and functioning. These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+
+### Prerequisites
+
+Rails
+A computer
+Postgressql
+
+
+### Installing
+
+enter the following commands in the terminal
+1. $ git clone https://github.com/passwordiscomputer/social-network-api.git
+2. navigate to projects root directory
+3. $ bundle install
+4. $ rails db:create
+5. $ rails db:migrate
+6. $ rails serve
+
+You are now up and running.
+
+### Basic usage instructions
+
+####Creating a user account
+This section assumes you are using port 3000, if not just replace 3000 with the port number you are using.
+
+```
+post
+http://localhost:3000/users?name=Bill&email=bill@bill.com&password=12341234&password_confirmation=12341234
+```
+This will create a new user and profile and add it to the database
+
+after this step
+
+```
+post
+http://localhost:3000/authenticate?email=bill@bill.com&password=12341234
+```
+
+will return the auth key to use as a header with the title authorization. it will be valid for 24 hours
+
+####Submitting a Post
+
+
+```
+post
+http://localhost:3000/posts?title=making new posts is easy&body=just follow the instructions
+```
+you can include any image file type in the body to submit with the post using the the key picture
+
+####Following another user
+```
+post
+localhost:3000/follows?user_id=6
+```
+follow user with that id.
+
+####Displaying Profile
+
+to display the logged in users profile
+```
+get request
+http://localhost:3000/profiles
+```
+to display a different users profile
+```
+get request
+http://localhost:3000/profiles?user_id=6
+```
+
+
+
+## In Progress Features
+
+[] create messaging system for interaction between users
+[] create comment model for commenting on posts
+
+## Future Features
+
+[] alternative to token based authentication
+[] add voting to posts using acts_as_votable
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+
+
+####Some stuff for epicodus
+
 Name of Student: Chase Bowden
 
 Name of Project: Social Network API
